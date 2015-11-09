@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="POS">
+<head>
+	<meta charset="UTF-8">
+	<title>Simpos | Simple POS</title>
+
+	<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+	<script src="/bower_components/angular/angular.min.js"></script>
+	<script src="/bower_components/angular-route/angular-route.min.js"></script>
+</head>
+<body>
+	<section id="head" class="head">
+		<nav class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">
+						SIMPOS | Simple POS
+					</a>
+				</div>
+
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      			<ul class="nav navbar-nav">
+						<li><a href="#/">Dashboard</a></li>
+						<li><a href="#sell">Sell</a></li>
+						<li><a href="#product">Product</a></li>
+	      			</ul>
+	  			</div>
+			</div>
+		</nav>
+	</section>
+
+	<section id="content" class="content container">
+		<ng-view></ng-view>
+	</section>
+	
+	
+	<script src="./assets/js/config.js"></script>
+	<script src="./assets/js/app.js"></script>
+
+</body>
+</html>

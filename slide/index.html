@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Vox Teneo Indonesia - JavaScript & AngularJS Training</title>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+        <link href='https://fonts.googleapis.com/css?family=Fauna+One&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+		<link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+		<link rel="stylesheet" href="/bower_components/reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="/bower_components/reveal.js/css/theme/night.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="/bower_components/reveal.js/lib/css/zenburn.css">
+		<link rel="stylesheet" href="./css/custom.css">
+	</head>
+
+	<body>
+		<div class="reveal orange-wl">
+			<div class="slides">
+
+				<section>
+					<h2 class="vt-logo branding">VOX TENEO <span class="vt">INDONESIA</span></h2>
+
+					<hr class="vt-bg">
+
+					<div class="row">
+						<div class="col-xs-12 ">
+							<div class="media">
+								<div class="media-left name">
+									Johntar Lumbanraja
+								</div>
+								<div class="media-body pos">
+									<h4 class="media-heading">Managing Director</h4>
+								</div>
+							</div>
+
+							<div class="media">
+								<div class="media-left name">
+									Patrick Logé
+								</div>
+								<div class="media-body pos">
+									<h4 class="media-heading">Marketing Director</h4>
+								</div>
+							</div>
+
+							<div class="media">
+								<div class="media-left name">
+									Robby Prima Suherlan
+								</div>
+								<div class="media-body pos">
+									<h4 class="media-heading">PHP Team Leader</h4>
+								</div>
+							</div>
+
+							<div class="media">
+								<div class="media-left name">
+									Ario Prabowo
+								</div>
+								<div class="media-body pos">
+									<h4 class="media-heading">PHP Team Leader</h4>
+								</div>
+							</div>
+
+							<div class="media">
+								<div class="media-left name">
+									Dwi Yudha
+								</div>
+								<div class="media-body pos">
+									<h4 class="media-heading">PHP Developer</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h2>AngularJS</h2>
+					<p>
+						<img width="30%" class="no-wrap" src="./img/angular_logo.png">
+					</p>
+					<p>The Super heroic JS MVW Framework</p>
+
+				</section>
+
+				<section>
+					<section>
+						<h2>Javascript Best Practices</h2>
+						<ul>
+							<li class="fragment" data-fragment-index="0">Abstraction & Encapsulation</li>
+							<li class="fragment" data-fragment-index="1">Literal vs Constructor</li>
+							<li class="fragment" data-fragment-index="2">Global variable is <strong>Evil.</strong></li>
+						</ul>
+
+						<aside class="notes">
+							Abstractions = menyembunyikan proses yang tidak diperlukan bagi penyajian, dan hanya memaparkan proses yang relevant.
+
+							Encapsulation = membungkus suatu proses tanpa memaparkan rincian di dalam proses tersebut.
+
+							GVE = 
+							- di javascript, semua kode akan berbagi ke satu global namespace, window.
+							- terlalu mengandalkan global variable akan berpotensi terjadinya timpa menimpa antar script yang mengunakan variable yang sama.
+
+						</aside>
+					</section>
+					<section>
+						<h2>Abstraction</h2>
+						<img src="./img/abstraction.jpg" alt="">
+						<blockquote>Abstraction tries to reduce and factor out details so that the developer can focus on a few concepts at a time</blockquote>
+					</section>
+					<section>
+						<h2>Encapsulation</h2>
+						<img src="./img/encapsulation.png" alt="" class="fragment">
+					</section>
+					<section>
+						<h2>Some tips!</h2>
+						<p class="fragment" data-fragment-index="0">
+							Developer tools is your best friend!
+						</p>
+						<p class="fragment" data-fragment-index="1">... If in doubt, do <strong>console.log()</strong> ...</p>
+					</section>
+				</section>
+
+				<section>
+					<h2>From Zero to Angular</h2>
+
+					<ul>
+						<li>
+						Include the Angular script file
+<pre><code data-trim  ng-non-bindable>
+&lt;script src="https://code.angularjs.org/1.4.7/angular.min.js"&gt;&lt;/script&gt;
+</code></pre>
+						</li>
+						<li>
+							Add <i>ng-app</i> attribute somewhere on HTML file
+						<pre><code data-trim  ng-non-bindable>
+&lt;tag ng-app&gt;&lt;/tag&gt;
+
+<!-- Example -->
+
+&lt;html ng-app&gt;
+
+	// this area is controlled by Angular
+
+&lt;/html&gt;
+						</code></pre>
+							<ul>
+								<li><i>ng-app</i> is an Angular <strong>Directive</strong></li>
+							</ul>
+						</li>
+					</ul>
+
+					<aside class="notes">
+						taplak
+					</aside>
+				</section>
+
+				<section>
+					<section>
+						<h2>ng-controller</h2>
+					</section>
+
+					<section>
+						<h2>The Basics</h2>
+
+						<ul>
+							<li>ng-controller is also an <span class="vt">Angular Directive</span></li>
+							<li>Controller takes a <span class="vt">$scope</span> parameter by default</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Capabilities</h2>
+
+						<ul>
+							<li class="fragment"><span class="vt">$scope</span> is an object.</li>
+							<li class="fragment">Multiple controllers.</li>
+							<li class="fragment">Nesting controllers.</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>a <span class="vt">$scope</span> to rule them all.</h2>
+
+						<ul>
+							<li>
+								<span class="vt">$scope</span> refers to the application model.
+							</li>
+							<li>Two-way data binding continuously update model changes to view and <i>vice versa</i>.</li>
+						</ul>
+
+						<img class="fragment" src="./img/two-waybinding.png" alt="">
+					</section>
+				</section>
+
+				<section>
+
+					<section>
+						<h2>Directives & Views</h2>
+					</section>
+
+					<section>
+						<h2><span class="vt">ng-</span>click</h2>
+
+						<img class="no-wrap" src="./img/ng-click.png" alt="">
+					</section>
+
+					<section>
+						<h2><span class="vt">ng-</span>repeat</h2>
+					</section>
+
+					<section>
+						<h2><span class="vt">ng-[</span>switch, if, show, hide<span class="vt">]</span></h2>
+					</section>
+
+					<section>
+						<h2>Create Directive like a Boss</h2>
+						<aside class="notes">
+                            Much like you create controllers and services, you can create your own directives for Angular to use. When Angular bootstraps your application, the HTML compiler traverses the DOM matching directives against the DOM elements.
+                        </aside>
+					</section>
+                    <section>
+                        <h3>Directive Types</h3>
+                        <aside class="notes">
+							All of the Angular-provided directives match attribute name, tag name, comments, or class name. The following demonstrates the various ways a directive (beerDir in this case) can be referenced from within a template:
+						</aside>
+                        <pre><code data-trim ng-non-bindable>
+&lt;product-dir&gt;&lt;/product-dir&gt;
+&lt;span data-product-dir="exp"&gt;&lt;/span&gt;
+&lt;!-- directive: product-dir exp --&gt;
+&lt;span class="product-dir: exp;"&gt;&lt;/span&gt;
+                        </code></pre>
+                        <p class="fragment fade-in">
+                            See how Angular normalize the directive name? The normalization process is as follows:
+                            <ol class="fragment fade-in">
+                                <li>Strip x- and data- from the front of the element/attributes.</li>
+                                <li>Convert the :, -, or _-delimited name to camelCase.</li>
+                            </ol>
+						</p>
+                    </section>
+
+				</section>
+
+				<section>				
+					<section>
+                        <h3>Directive Example</h3>
+                        <pre><code data-trim ng-non-bindable>
+App.directive('productDir', function() {
+  return {
+    template: 'This product directive ;)'
+  };
+});
+						</code></pre>
+                        <pre><code data-trim ng-non-bindable>
+&lt;product-dir&gt;&lt;/product-dir&gt;
+						</code></pre>
+                        <product-dir></product-dir>
+                    </section>
+                    <section>
+                        <h3>More Directive Example</h3>
+                        <pre><code data-trim ng-non-bindable>
+App.controller('ProductController', ['$scope', function($scope) {
+  $scope.products = [
+    { name: 'Helm', price: 200000},
+    { name: 'Ban Motor', price: 100000},
+    { name: 'Selang', price: 25000}];
+}])
+.directive('productList', function() {
+  return {
+    controller: 'ProductController',
+    restrict: 'E', // 'A' = attribute, 'E' = element, 'C' = class
+    templateUrl: 'includes/product-list.html'
+  };
+});
+						</code></pre>
+                        <pre>includes/product-list.html<code data-trim ng-non-bindable>
+&lt;ul class="list"&gt;
+    &lt;li ng-repeat="product in products"&gt;
+        {{ product.name }} : {{ product.price }}
+    &lt;/li&gt;
+&lt;/ul&gt;
+						</code></pre>
+                        <pre><code data-trim ng-non-bindable>
+&lt;product-list&gt;&lt;/product-list&gt;
+						</code></pre>
+                        <product-list></product-list>
+                    </section>
+				</section>
+				
+				<section>
+					<section>
+						<img src="./img/meme-abs.jpeg" alt="" class="no-wrap">
+					</section>
+					<section>
+						<h2>Service <span class="fragment"><span class="vt">|</span> Factory</span></h2>
+
+						<p>usefull for code sharing and organization across the application.</p>
+
+						<span>
+							<span class="fragment">Singleton</span><span class="fragment">, Lazily instantiated</span>
+						</span>
+
+						<aside class="notes">
+							<p>The Singleton Pattern limits the number of instances of a particular object to just one</p>
+							<ul>
+								<li>If you use a service you will get the instance of a function ("this" keyword).</li>
+								<li>If you use a factory you will get the value that is returned by invoking the function reference (the return statement in factory).</li>
+							</ul>
+
+							<p>Lazily instantiated => Angular only instantiates a service when an application component depends on it</p>
+						</aside>
+					</section>
+
+					<section>
+						<h2>$http</h2>
+
+						<p>
+							provides communication with remote HTTP servers
+						</p>
+					</section>
+
+					<section>
+						<h2>$q</h2>
+
+						<p>
+							helps you to run function asynchronously and return as a promise
+						</p>
+					</section>
+
+					<section>
+						<h2>
+							$custom<span class="vt">Service</span>
+						</h2>
+
+						<pre><code data-trim>
+angular.factory('serviceName', function() {
+	var obj;
+
+	// some logic here
+
+	return obj;
+});
+						</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Routing</h2>
+					</section>
+
+					<section>
+						<h3>using <span class="vt">ng</span>Route</h3>
+
+						<ul>
+							<li>Depends on another modules: <a href="https://cdnjs.com/libraries/angular.js/1.4.7" target="_blank">angular-route.js</a></li>
+							<li>ngRoute => $routeProvider</li>
+						</ul>
+
+						<pre><code data-trim>
+angular
+.module('App', ['ngRoute'])
+.config(['$routeProvider', function ($routeProvider) {
+	$routeProvider
+		.when('/', {
+            templateUrl : 'partial/index.html',
+            controller: 'MainController'
+        })
+						</code></pre>
+					</section>
+					<section>
+						<h3>using <span class="vt">ng</span>RouteParams</h3>
+
+						<pre><code data-trim>
+angular
+.config(['$routeProvider', function($routeProvider) {
+$routeProvider
+	.when('/order/:id', {
+		templateUrl: 'templates/order-detail.html',
+		controller: 'OrderController'
+	})
+}])
+.controller('OrderController', ['$scope', '$route', '$posOrder', function ($scope, $routeParams, $posOrder) {
+	$scope.params = $routeParams;
+	$scope.orders = [];
+
+	$posOrder.getById($scope.params.current.params.id).then(function(result) {
+		$scope.orders = result.data;
+	})
+}])
+						</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>e2e Testing</h2>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Summary</h2>
+					</section>
+				</section>
+
+				<section>
+					<section data-background="#333">
+						<img class="no-wrap" width="500px" src="./img/54532465.jpg">	
+					</section>
+					<section data-background="#333">
+						<img class="no-wrap" src="./img/bf6ce3580b3ad0d02bcdc71439ccf88affc2cde1464424d423e376eb93b66746.jpg">
+					</section>
+				</section>
+				
+                <section data-background-video="./img/handshake.mp4" data-background-video-loop data-background-video-autoplay>
+                    <div id="bgoverlay">
+                        <h2 class="vt-logo">VOX TENEO INDONESIA</span></h2>
+                        <h3 class="vt">Your IT partner</h3>
+                    </div>
+                </section>
+			</div>
+		</div>
+
+		<script src="/bower_components/reveal.js/lib/js/head.min.js"></script>
+		<script src="/bower_components/reveal.js/js/reveal.js"></script>
+
+		<script>
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '/bower_components/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '/bower_components/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '/bower_components/reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() {
+						hljs.configure({
+							tabReplace: '    ',
+						});
+						hljs.initHighlightingOnLoad();
+					} },
+					{ src: '/bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true },
+					{ src: '/bower_components/reveal.js/plugin/notes/notes.js', async: true }
+				]
+			});
+		</script>
+
+	</body>
+
+</html>

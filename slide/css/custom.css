@@ -1,0 +1,102 @@
+.reveal section img.no-wrap {
+	background: transparent;
+	border: none;
+	box-shadow: none;
+}
+
+
+.live-example {
+	margin: 50px 0 !important;
+	text-align: center;
+}
+
+.live-example input {
+	color: #000;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.small {
+	font-size: 75% !important;
+}
+
+button {
+	color: #333;
+}
+
+.orange-wl {
+	background: #353133;
+}
+
+.list {
+	font-size: 70%;
+	margin: 0 !important;
+}
+
+.sticky-logo {
+	position: absolute;
+	top: 0;
+	left: 5%;
+	z-index: 9999;
+}
+
+.sticky-logo > img {
+	-webkit-box-shadow: 1px 0px 8px #333 !important;
+	box-shadow: 1px 0px 8px #333 !important;
+}
+
+.left {
+	text-align: left;
+}
+
+.vt {
+	color: #F9A01B !important;
+}
+
+.vt-bg {
+	background-color: #F9A01B;
+	border: 0;
+	height: 4px;
+}
+
+.name {
+	width: 50% !important;
+}
+
+.media-body {
+	text-align: left;
+    padding-left: 15px !important;
+}
+
+.media-body h4 {
+	margin: 0 10px 0 0;
+}
+
+.media-left {
+	text-align: right;
+    padding-right: 15px !important;
+}
+
+.vt-logo {
+	font-size: 2.8em !important;
+    font-weight: bold !important;
+}
+
+.branding {
+    font-family: 'Fauna One' !important;
+}
+
+.slides h3 {
+    font-size: 2.5em !important;
+    font-weight: bold !important;
+}
+
+#bgoverlay {
+    background-color: rgba(0,0,0,0.5);
+}
+
+.reveal code {
+	font-family: 'monospace' !important;
+}

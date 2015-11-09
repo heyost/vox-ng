@@ -1,0 +1,22 @@
+<div class="row">
+	<div class="col-xs-8 col-xs-offset-2">
+		<h2>Latest Orders</h2>
+
+		<table class="table table-stripped table-bordered">
+			<thead>
+				<th>Order Number</th>
+				<th>Total</th>
+			</thead>
+			<tbody>
+				<tr ng-repeat="(idx, order) in orders track by $index">
+					<td>
+						<a href="#order/{{ idx }}">{{ idx }}</a>
+					</td>
+					<td>
+						{{ order.total | number }}
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
